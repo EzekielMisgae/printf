@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
-* prt_bnr - prints decimal in binary
+* print_bnr - prints decimal in binary
 * @arguments: input string
 * @buff: buffer pointer
 * @ibuff: index for buffer pointer
 * Return: number of chars printed.
 */
 
-int prt_bnr(va_list arguments, char *buff, unsigned int ibuff)
+int print_bnr(va_list arguments, char *buff, unsigned int ibuff)
 {
 int int_input, count, i, first_one, isnegative;
 char *binary;
