@@ -12,7 +12,6 @@
 int prt_chr(va_list arguments, char *buff, unsigned int ibuff)
 {
 char c;
-
 c = va_arg(arguments, int);
 handl_buff(buff, c, ibuff);
 return (1);
