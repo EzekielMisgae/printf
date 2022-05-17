@@ -18,7 +18,7 @@ isneg = 0;
 if (int_input < 0)
 {
 int_in = int_input * -1;
-ibuf = handl_buff(buff, '-', ibuff);
+ibuff = handl_buff(buff, '-', ibuff);
 isneg = 1;
 }
 else
