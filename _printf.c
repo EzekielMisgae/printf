@@ -24,7 +24,7 @@ if (format[i] == '%')
 {
 if (format[i + 1] == '\0')
 {
-prt_buff(buffer, ibuff), free(buffer), va_end(arguments);
+print_buff(buffer, ibuff), free(buffer), va_end(arguments);
 return (-1);
 }
 else
@@ -49,6 +49,6 @@ handl_buff(buffer, format[i], ibuff), len++;
 for (ibuff = len; ibuff > 1024; ibuff -= 1024)
 ;
 }
-prt_buff(buffer, ibuff), free(buffer), va_end(arguments);
+print_buff(buffer, ibuff), free(buffer), va_end(arguments);
 return (len);
 }
