@@ -15,6 +15,5 @@ char c;
 
 c = va_arg(arguments, int);
 handl_buff(buff, c, ibuff);
-
 return (1);
 }
