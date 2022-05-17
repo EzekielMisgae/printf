@@ -9,7 +9,7 @@
 int _printf(const char *format, ...)
 
 {
-unsigned int i = 0, len = 0, ibuf = 0;
+unsigned int i = 0, len = 0, ibuff = 0;
 va_list arguments;
 int (*function)(va_list, char *, unsigned int);
 char *buffer;
@@ -50,6 +50,6 @@ handl_buff(buffer, format[i], ibuff), len++;
 for (ibuff = len; ibuff > 1024; ibuff -= 1024)
 ;
 }
-print_buff(buffer, ibuf), free(buffer), va_end(arguments);
+prt_buff(buffer, ibuff), free(buffer), va_end(arguments);
 return (len);
 }
