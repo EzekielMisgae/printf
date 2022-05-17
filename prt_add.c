@@ -2,15 +2,14 @@
 #include <stdio.h>
 
 /**
-* print_add - prints the address of an input variable
+* prt_add - prints the address of an input variable
 * @arguments: input of address.
 * @buff: buffer pointer
 * @ibuff: index for buffer pointer
 * Return: number of chars printed.
 */
 
-
-int print_add(va_list arguments, char *buff, unsigned int ibuff)
+int prt_add(va_list arguments, char *buff, unsigned int ibuff)
 {
 void *add;
 long int int_input;
@@ -22,7 +21,7 @@ add = (va_arg(arguments, void *));
 if (add == NULL)
 {
 for (i = 0; nill[i]; i++)
-ibuf = handl_buff(buf, nill[i], ibuff);
+ibuff = handl_buff(buff, nill[i], ibuff);
 return (5);
 }
 int_input = (intptr_t)add;
