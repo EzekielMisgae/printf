@@ -1,6 +1,6 @@
 #_PRINTF
-##NAME _printf
-##DESCRIPTION
+
+##NAME = _printf
 
 This is a project to be done in teams of 2 people with my team-mate Medhanit Abebe.
 
