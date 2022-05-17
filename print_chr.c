@@ -2,14 +2,14 @@
 #include <stdio.h>
 
 /**
-* prt_chr - writes the character c to stdout
+* print_chr - writes the character c to stdout
 * @arguments: input char
 * @buff: buffer pointer
 * @ibuff: index for buffer pointer
 * Return: On success 1.
 */
 
-int prt_chr(va_list arguments, char *buff, unsigned int ibuff)
+int print_chr(va_list arguments, char *buff, unsigned int ibuff)
 {
 char c;
 c = va_arg(arguments, int);
