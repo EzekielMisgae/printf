@@ -1,5 +1,6 @@
 #include "main.h"
 
+
 /**
 * handl_buff - concatenates the buffer characters
 * @buff: buffer pointer
