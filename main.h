@@ -50,7 +50,7 @@ int pnupx(va_list arguments, char *buff, unsigned int ibuff);
 int psint(va_list arguments, char *buff, unsigned int ibuff);
 int (*get_print_func(const char *s, int index))(va_list, char *, unsigned int);
 int ev_print_func(const char *s, int index);
-unsigned int handl_buf(char *buff, char c, unsigned int ibuff);
+unsigned int handl_buff(char *buff, char c, unsigned int ibuff);
 int print_buf(char *buff, unsigned int nbuf);
 char *fill_binary_array(char *binary, long int int_in, int isneg, int limit);
 char *fill_oct_array(char *bnr, char *oct);
