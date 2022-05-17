@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
-* prinlhex - prints a long decimal in hexadecimal
+* plhex - prints a long decimal in hexadecimal
 * @arguments: input string
 * @buff: buffer pointer
 * @ibuff: index for buffer pointer
 * Return: number of chars printed
 */
 
-int prinlhex(va_list arguments, char *buff, unsigned int ibuff)
+int plhex(va_list arguments, char *buff, unsigned int ibuff)
 {
 long int int_input, i, isnegative, count, first_digit;
 char *hexadecimal, *binary;
