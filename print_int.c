@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
-* prt_int - prints an integer
+* print_int - prints an integer
 * @arguments: input string
 * @buff: buffer pointer
 * @ibuff: index for buffer pointer
 * Return: number of chars printed.
 */
 
-int prt_int(va_list arguments, char *buff, unsigned int ibuff)
+int print_int(va_list arguments, char *buff, unsigned int ibuff)
 {
 int int_input;
 unsigned int int_in, int_temp, i, div, isneg;
