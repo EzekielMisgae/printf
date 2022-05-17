@@ -12,6 +12,5 @@
 int print_prg(va_list a __attribute__((unused)), char *buff, unsigned int i)
 {
 handl_buff(buff, '%', i);
-
 return (1);
 }
