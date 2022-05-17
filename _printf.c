@@ -7,7 +7,6 @@
 */
 
 int _printf(const char *format, ...)
-
 {
 unsigned int i = 0, len = 0, ibuff = 0;
 va_list arguments;
