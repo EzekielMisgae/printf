@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * prinpint - print integer with plus symbol
+ * prinsint - prints int begining with space
  * @arguments: input string
  * @buf: buffer pointer
  * @ibuf: index for buffer pointer
  * Return: number of chars printed
  */
-int prinpint(va_list arguments, char *buf, unsigned int ibuf)
+int prinsint(va_list arguments, char *buf, unsigned int ibuf)
 {
 	int int_input;
 	unsigned int int_in, int_temp, i, div;
@@ -21,7 +21,7 @@ int prinpint(va_list arguments, char *buf, unsigned int ibuf)
 	else
 	{
 		int_in = int_input;
-		ibuf = handl_buf(buf, '+', ibuf);
+		ibuf = handl_buf(buf, ' ', ibuf);
 	}
 	int_temp = int_in;
 	div = 1;
