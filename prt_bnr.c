@@ -38,7 +38,6 @@ ibuff = handl_buff(buff, binary[i], ibuff);
 count++;
 }
 }
-
 free(binary);
 return (count);
 }
