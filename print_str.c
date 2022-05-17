@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
-* prt_str - writes the string to stdout
+* print_str - writes the string to stdout
 * @arguments: input string
 * @buff: buffer pointer
 * @ibuff: index for buffer pointer
 * Return: On success 1.
 */
 
-int prt_str(va_list arguments, char *buff, unsigned int ibuff)
+int print_str(va_list arguments, char *buff, unsigned int ibuff)
 {
 char *str;
 unsigned int i;
