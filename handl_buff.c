@@ -12,7 +12,7 @@ unsigned int handl_buff(char *buff, char c, unsigned int ibuff)
 {
 if (ibuff == 1024)
 {
-prt_buff(buff, ibuff);
+print_buff(buff, ibuff);
 ibuff = 0;
 }
 buff[ibuff] = c;
