@@ -17,7 +17,7 @@ int_input = va_arg(arguments, int);
 isnegative = 0;
 if (int_input == 0)
 {
-ibuf = handl_buff(buff, '0', ibuff);
+ibuff = handl_buff(buff, '0', ibuff);
 return (1);
 }
 if (int_input < 0)
