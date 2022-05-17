@@ -1,54 +1,92 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
-* _printf - formatted output conversion and print data
-* @format: input string
-* Return: number of chars to be printed
-*/
+ * printIdentifiers - prints special characters
+ * @next: character after the %
+ * @arg: argument for the indentifier
+ * Return: the number of characters printed
+ * (excluding the null byte used to end output to strings)
+ */
+
+int printIdentifiers(char next, va_list arg)
+{
+	int functsIndex;
+
+	identifierStruct functs[] = {
+		{"c", print_char},
+		{"s", print_str},
+		{"d", print_int},
+		{"i", print_int},
+		{"u", print_unsigned},
+		{"b", print_unsignedToBinary},
+		{"o", print_oct},
+		{"x", print_hex},
+		{"X", print_HEX},
+		{"S", print_STR},
+		{NULL, NULL}
+	};
+
+	for (functsIndex = 0; functs[functsIndex].indentifier != NULL; functsIndex++)
+	{
+		if (functs[functsIndex].indentifier[0] == next)
+			return (functs[functsIndex].printer(arg));
+	}
+	return (0);
+}
+
+/**
+ * _printf - mimic printf from stdio
+ * Description: produces output according to a format
+ * write output to stdout, the standard output stream
+ * @format: character string composed of zero or more directives
+ *
+ * Return: the number of characters printed
+ * (excluding the null byte used to end output to strings)
+ * return -1 for incomplete identifier error
+ */
 
 int _printf(const char *format, ...)
 {
-unsigned int i = 0, len = 0, ibuff = 0;
-va_list arguments;
-int (*function)(va_list, char *, unsigned int);
-char *buffer;
+	unsigned int i;
+	int identifierPrinted = 0, charPrinted = 0;
+	va_list arg;
 
-va_start(arguments, format), buffer = malloc(sizeof(char) * 1024);
-if (!format || !buffer || (format[i] == '%' && !format[i + 1]))
-return (-1);
-if (!format[i])
-return (0);
-for (i = 0; format && format[i]; i++)
-{
-if (format[i] == '%')
-{
-if (format[i + 1] == '\0')
-{
-print_buff(buffer, ibuff), free(buffer), va_end(arguments);
-return (-1);
-}
-else
-{
-function = get_print_func(format, i + 1);
-if (function == NULL)
-{
-if (format[i + 1] == ' ' && !format[i + 2])
-return (-1);
-handl_buff(buffer, format[i], ibuff), len++, i--;
-}
-else
-{
-len += function(arguments, buffer, ibuff);
-i += ev_print_func(format, i + 1);
-}
-}
-i++;
-}
-else
-handl_buff(buffer, format[i], ibuff), len++;
-for (ibuff = len; ibuff > 1024; ibuff -= 1024)
-;
-}
-print_buff(buffer, ibuff), free(buffer), va_end(arguments);
-return (len);
+	va_start(arg, format);
+	if (format == NULL)
+		return (-1);
+
+	for (i = 0; format[i] != '\0'; i++)
+	{
+		if (format[i] != '%')
+		{
+			_putchar(format[i]);
+			charPrinted++;
+			continue;
+		}
+		if (format[i + 1] == '%')
+		{
+			_putchar('%');
+			charPrinted++;
+			i++;
+			continue;
+		}
+		if (format[i + 1] == '\0')
+			return (-1);
+
+		identifierPrinted = printIdentifiers(format[i + 1], arg);
+		if (identifierPrinted == -1 || identifierPrinted != 0)
+			i++;
+		if (identifierPrinted > 0)
+			charPrinted += identifierPrinted;
+
+		if (identifierPrinted == 0)
+		{
+			_putchar('%');
+			charPrinted++;
+		}
+	}
+	va_end(arg);
+	return (charPrinted);
 }
