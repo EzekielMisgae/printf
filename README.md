@@ -4,46 +4,36 @@
 
 This is a project to be done in teams of 2 people with my team-mate Medhanit Abebe.
 
-This function "_printf()" id the remake of "printf()" of the C library stdio.h. It contains some basic features under 3 of "printf".
-
-_printf() performs formatted outout conversion and print data. Its prototype is the following:
-
-int _printf(const char *format, ...)
-
-where **format** contains the string that is printed.
-
-_printf() is a variadic function, it can recieves n arguments that replace by n tags written inside the string.
-
 ##FILES
 
 _printf.c
 main.h
-get_print_func.c
-handl_buf.c
-print_chr.c
-print_int.c
-print_bnr.c
-print_oct.c
-print_hex.c
-print_upx.c
-print_usr.c
-print_unt.c
-print_rev.c
-print_rot.c
-print_add.c
-print_long_oct.c
-print_long_hex.c
-print_long_int.c
-print_long_upx.c
-print_long_unt.c
-print_short_oct.c
-print_short_hex.c
-print_short_int.c
-print_short_upx.c
-print_short_unt.c
-print_num_hex.c
-print_num_oct.c
-print_num_upx.c
-print_plus_int.c
-print_space_int.c
-ev_print_func.c
+get_prt_func.c
+hl_buf.c
+prt_chr.c
+prt_int.c
+prt_bnr.c
+prt_oct.c
+prt_hex.c
+prt_upx.c
+prt_usr.c
+prt_unt.c
+prt_rev.c
+prt_rot.c
+prt_add.c
+prt_lng_oct.c
+prt_lng_hex.c
+prt_lng_int.c
+prt_lng_upx.c
+prt_lng_unt.c
+prt_srt_oct.c
+prt_srt_hex.c
+prt_srt_int.c
+prt_srt_upx.c
+prt_srt_unt.c
+prt_num_hex.c
+prt_num_oct.c
+prt_num_upx.c
+prt_plus_int.c
+prt_spc_int.c
+ev_prt_func.c
